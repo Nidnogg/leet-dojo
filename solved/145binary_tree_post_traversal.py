@@ -14,9 +14,9 @@ class Solution:
         res = []
         stack =[]
         cur = root
-        
+
         while cur or stack:
-            if cur :
+            if cur:
                 res.append(cur.val)
                 stack.append(cur)
                 cur = cur.right
@@ -24,27 +24,27 @@ class Solution:
                 cur = stack.pop()
                 cur = cur.left
         return res[::-1]
+
 # Incredibly bad performance/memory for some reason.
 # class Solution:
 #     def postorderTraversal(self, root: Optional[TreeNode]) -> list[int]:
 #         result = []
 #         return self.traverse(root, result)
-           
+
 #     def traverse(self, root: Optional[TreeNode], result):
 #         if(root != None):
 #             self.traverse(root.left, result)
 #             self.traverse(root.right, result)
 #             result.append(root.val)
 #         return result
-  
+
 sl = Solution()
-p = TreeNode(1, right=TreeNode(2, left=TreeNode(3)))       
+p = TreeNode(1, right=TreeNode(2, left=TreeNode(3)))
 print(sl.preorderTraversal(p))
 
 
 
-        
-            
-        
-        
-        
+
+
+
+

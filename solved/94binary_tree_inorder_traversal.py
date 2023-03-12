@@ -8,11 +8,10 @@ class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         result = []
         return self.traverse(root, result)
-           
-    def traverse(self, root: Optional[TreeNode], result):
+
+    def traverse(self, root: Optional[TreeNode], result, maxDepth):
         if(root != None):
             self.traverse(root.left, result)
             result.append(root.val)
             self.traverse(root.right, result)
         return result
-        
